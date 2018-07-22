@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>商家用户注册</title>
+    <title>管理员密码修改</title>
 @include("layouts/_msg")
 @include("layouts/_error")
 
-    <!-- Bootstrap -->
+<!-- Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
@@ -22,38 +22,24 @@
 <body>
 <div class="callout-danger container-fluid" >
 
-    <form class="form-horizontal" action="{{route("user.reg")}}" method="post">
-        {{csrf_field()}}
+    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+        {{ csrf_field()}}
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">管理员原密码</label>
             <div class="col-sm-3">
-                <input type="text" class="form-control"  placeholder="用户名" name="name">
+                <input type="text" class="form-control"  placeholder="原密码" name="password">
             </div>
         </div>
         <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+            <label for="inputPassword3" class="col-sm-2 control-label">新密码</label>
             <div class="col-sm-3">
-                <input type="password" class="form-control" id="inputPassword3" placeholder="密码" name="password">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="密码" name="newPassword">
             </div>
         </div>
-        <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">邮箱</label>
-            <div class="col-sm-3">
-                <input type="text" class="form-control" placeholder="email" name="email" value="{{old('email')}}">
-            </div>
-        </div>
-        {{--<div class="form-group">--}}
-        {{--<div class="col-sm-offset-2 col-sm-3">--}}
-        {{--<div class="checkbox">--}}
-        {{--<label>--}}
-        {{--<input type="checkbox"> 记住我--}}
-        {{--</label>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-        {{--</div>--}}
+
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-3">
-                <button type="submit" class="btn btn-default">注册</button>
+                <button type="submit" class="btn btn-default">修改密码</button>
             </div>
         </div>
     </form>

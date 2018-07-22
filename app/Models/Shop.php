@@ -10,7 +10,7 @@ class Shop extends Model
         "shop_rating","brand","fengniao","bao","piao","zhun","start_send",
         "send_cost","notice","discount"];
 
-    public function shop()
+    public function cate()
     {
 
 

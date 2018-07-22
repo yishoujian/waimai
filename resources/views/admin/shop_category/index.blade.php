@@ -15,12 +15,14 @@
                        @endif</td>
                 <td>
 
-                    {{$shop->status}}</td>
-                <td>
-                    <a href="{{route('shop_category.edit')}}" class="btn btn-success">编辑</a>
+                    {{$shop->status?"是":"否"}}
+                    {{--{{$shop->status?"":"checked"}}否--}}
                 </td>
                 <td>
-                    <a href="{{route('shop_category.del')}}" class="btn btn-danger">删除</a>
+                    <a href="{{route('shop_category.edit',$shop->id)}}" class="btn btn-success">编辑</a>
+                </td>
+                <td>
+                    <a href="{{route('shop_category.del',$shop->id)}}" class="btn btn-danger">删除</a>
                 </td>
             </tr>
         @endforeach

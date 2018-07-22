@@ -43,7 +43,7 @@
 <div class="wrapper">
 
 
-@include("layouts/_header")
+@include("admin.layouts._header")
 
     <!-- Left side column. contains the logo and sidebar -->
 @include("layouts/_left")

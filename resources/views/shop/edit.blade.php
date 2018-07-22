@@ -33,56 +33,57 @@
             <label for="exampleInputEmail1">名字</label>
             <input type="text" class="form-control"  placeholder="name" name="name" value="{{old('name',$shops->name)}}">
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">密码</label>
-            <input type="password" class="form-control" name="password" placeholder="Password" value="{{old('password',$shops->password)}}">
-        </div>
+        {{--<div class="form-group">--}}
+            {{--<label for="exampleInputPassword1">密码</label>--}}
+            {{--<input type="password" class="form-control" name="password" placeholder="Password" value="{{old('password',$shops->password)}}">--}}
+        {{--</div>--}}
         <div class="form-group">
             <label for="exampleInputFile">商家图片</label>
-            <input type="file" id="exampleInputFile" name="shop_logo" value="">
+            <img src="/uploads/{{$shops->shop_logo}}/" width="80" height="60">
+            <input type="file" id="exampleInputFile" name="shop_logo" >
             <p class="help-block"></p>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">评分</label>
-            <input type="text" class="form-control"  placeholder="name" name="shop_rating" value="{{old('shop_rating',$shops->shop_rating)}}">
+            <input type="text" class="form-control"  placeholder="name" name="shop_rating" value="{{$shops->shop_rating}}">
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">是否是品牌</label>
-            <input type="radio" name="brand" value="{{$shops->brand}}">	是
-            <input type="radio" name="brand" value="{{$shops->brand}}" checked>否
+            <input type="radio" name="brand" value="1" {{$shops->brand?"checked":""}}>是
+            <input type="radio" name="brand" value="0" {{$shops->brand?"":"checked"}} >否
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">是否准时</label>
-            <input type="radio" name="on_time" value="{{$shops->ontime}}">	是
-            <input type="radio" name="on_time" value="{{$shops->ontime}}" checked>否
+            <input type="radio" name="on_time" value="1" {{$shops->on_time?"checked":""}}>	是
+            <input type="radio" name="on_time"  value="0" {{$shops->on_time?"":"checked"}}>否
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">是否蜂鸟</label>
-            <input type="radio" name="fengniao" value="{{$shops->fengniao}}">	是
-            <input type="radio" name="fengniao" value="{{$shops->fengniao}}" checked>否
+            <input type="radio" name="fengniao" value="1" {{$shops->fengniao?"checked":""}}>	是
+            <input type="radio" name="fengniao"  value="0" {{$shops->fengniao?"":"checked"}}>否
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">是否有票</label>
-            <input type="radio" name="piao" value="" class="">	是
-            <input type="radio" name="piao" value="" checked>否
+            <input type="radio" name="piao" value="1" {{$shops->piao?"checked":""}}>	是
+            <input type="radio" name="piao"  value="0"{{$shops->piao?"":"checked"}}>否
         </div>
 </div>
 <div class="form-group">
     <label for="exampleInputEmail1">是否包</label>
-    <input type="radio" name="bao" value="" class="">	是
-    <input type="radio" name="bao" value="" checked>否
+    <input type="radio" name="bao"  value="1" {{$shops->bao?"checked":""}}>	是
+    <input type="radio" name="bao" value="0"{{$shops->bao?"":"checked"}}>否
 </div>
 <div class="form-group">
     <label for="exampleInputEmail1">是否准</label>
-    <input type="radio" name="准" value="" class="">	是
-    <input type="radio" name="准" value="" checked>否
+    <input type="radio" name="zhun"  value="1"{{$shops->zhun?"checked":""}}>	是
+    <input type="radio" name="zhun" value="0"{{$shops->zhun?"":"checked"}}>否
 </div>
 <div class="form-group">
     <label for="exampleInputEmail1">起送金额</label>
-    <input type="text" class="form-control"  placeholder="name" name="start_send" value="{{old('start_send',$shops->start_send)}}">
+    <input type="text" class="form-control"  placeholder="name" name="start_send"  value="{{$shops->start_send}}">
 </div>
 <div class="form-group">
     <label for="exampleInputEmail1">配送费</label>
@@ -94,7 +95,7 @@
 </div>
 <div class="form-group">
     <label for="exampleInputEmail1">优惠信息</label>
-    <input type="text" class="form-control"  placeholder="name" name="discount" value="{{old('discount',$shops->discoun)}}">
+    <input type="text" class="form-control"  placeholder="name" name="discount" value="{{old('discount',$shops->discount)}}">
 </div>
 
 

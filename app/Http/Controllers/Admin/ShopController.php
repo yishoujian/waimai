@@ -9,7 +9,7 @@ use App\Tools\ImageUploadTool;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ShopController extends Controller
+class ShopController extends BaseController
 {
 
     public function index()
@@ -27,8 +27,8 @@ class ShopController extends Controller
 
     public function index1()
     {
-        $shops=Shop::paginate(2);
         //得到所有数据
+        $shops=Shop::paginate(2);
 
         //显示视图
         return view("shop.index1",compact("shops"));
@@ -55,6 +55,7 @@ class ShopController extends Controller
             ]);
             //的到所有数据
             $shops=$request->all();
+            $shops['status']="1";
 //            var_dump($shops);exit;
             $shops['shop_logo']="";
             if ($request->file("shop_logo") ){
@@ -85,18 +86,19 @@ class ShopController extends Controller
         $datas=ShopCategory::all();
         //通过id找到数据
       $shops=Shop::find($id);
+//
       //判断提交方式
         if ($request->isMethod("post")){
             $this->validate($request,[
                "name"=>"required",
-                "password"=>"required",
+//                "password"=>"required",
             ]);
             //的到更新后的数据
             $data=$request->all();
 //            var_dump($shops);exit;
-            $shops['shop_logo']="";
-            if ( $shops['shop_logo']){
-                $shops['shop_logo']=$request->file("shop_logo")->store("shop","logo");
+            $data['shop_logo']=$shops->shop_logo;
+            if ( $request->file("shop_logo")){
+                $data['shop_logo']=$request->file("shop_logo")->store("shop","logo");
             }
             //数据入库
             $shops->update($data);
@@ -119,6 +121,26 @@ class ShopController extends Controller
         $request->session()->flash("success","删除成功");
         //跳转
         return redirect()->route("shop.index1");
+
+        }
+
+    public function check(Request $request,$id)
+    {
+        //得到数据
+        $data=Shop::findOrFail($id);
+        //得到状态
+        $data['status']=1;
+       $data->save();
+       //提示
+//        return view("shop.index1");
+        //
+        //得到所有数据
+        $shops=Shop::paginate(2);
+
+        //显示视图
+        return view("shop.index1",compact("shops","data"));
+
+
 
         }
 }

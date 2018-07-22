@@ -28,13 +28,20 @@
 
         <div class="form-group">
             <label for="exampleInputEmail1">名字</label>
-            <input type="text" class="form-control"  placeholder="name" name="name" value="{{old('name')}}">
+            <input type="text" class="form-control"  placeholder="name" name="name" value="{{$shop->name}}">
 
         <div class="form-group">
             <label for="exampleInputFile">商家图片</label>
-            <input type="file" id="exampleInputFile" name="logo" value="{{old('logo')}}">
+            <img src="/uploads/{{$shop->logo}}" width="80" height="60">
+            <input type="file" id="exampleInputFile" name="logo"  >
             <p class="help-block"></p>
         </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">是否在线</label>
+                <input type="radio" name="status"  value="1" {{$shop->status?"checked":""}}>	是
+                <input type="radio" name="status" value="0"{{$shop->sattus?"":"checked"}}>否
+            </div>
         <button type="submit" class="btn btn-success">编辑</button>
     </form>
 </div>

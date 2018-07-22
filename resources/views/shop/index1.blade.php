@@ -1,4 +1,4 @@
-@extends("layouts.dafault")
+@extends("shop/layouts/dafault")
 @section("content")
     <a href="{{route('shop.add')}}" class="btn btn-success">添加</a>
     <table class="table table-hover">
@@ -10,7 +10,7 @@
         @foreach($shops as $shop)
             <tr>
                 <td>{{$shop->id}}</td>
-                <td>{{$shop->shop->name}}</td>
+                <td>{{$shop->cate->name}}</td>
                 <td>{{$shop->name}}</td>
                 <td>
                     @if($shop->shop_logo)
@@ -30,7 +30,27 @@
                 <td>{{$shop->send_cost}}</td>
                 <td>{{$shop->send_cost}}</td>
                 <td>{{$shop->discount}}</td>
-                <td>{{$shop->status}}</td>
+                {{--<td>--}}
+                    {{--<input type="radio" name="radio"   {{$shop->status?"是":"否"}}>通过--}}
+                    {{--<input type="radio" name="radio" value="3" checked>未通过--}}
+                    {{--</label>--}}
+                {{--</td>--}}
+                <?php if ($shop->status==1){
+                    echo"   <td>已通过审核</td>";
+
+                }else{
+                    ?>
+                    <td>
+                    <a href="{{route('shop.check',$shop)}}" class="btn btn-success">审核</a>
+                </td>
+      <?php
+                }
+                ?>
+
+
+
+
+
                 <td>
                     <a href="{{route('shop.edit',$shop)}}" class="btn btn-success">编辑</a>
                 </td>
