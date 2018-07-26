@@ -16,7 +16,7 @@ class ShopCategoryController extends BaseController
         $shops=ShopCategory::all();
 //        dd($users);
 
-        return view("shop_category.index",compact('shops'));
+        return view("admin/shop_category/index",compact('shops'));
         //显示视图
     }
 
@@ -75,7 +75,7 @@ class ShopCategoryController extends BaseController
             return redirect()->route("shop_category.index");
         }
         //显示视图
-        return view("shop_category.edit",compact("shop"));
+        return view("admin.shop_category.edit",compact("shop"));
 
         }
 

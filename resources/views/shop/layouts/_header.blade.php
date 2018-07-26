@@ -29,8 +29,7 @@
                                 <li><!-- start message -->
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user2-160x160.jpg" class="img-circle"
-                                                 alt="User Image">
+                                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Support Team
@@ -43,8 +42,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle"
-                                                 alt="User Image">
+                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             AdminLTE Design Team
@@ -56,8 +54,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle"
-                                                 alt="User Image">
+                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Developers
@@ -69,8 +66,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user3-128x128.jpg" class="img-circle"
-                                                 alt="User Image">
+                                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Sales Department
@@ -82,8 +78,7 @@
                                 <li>
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="/dist/img/user4-128x128.jpg" class="img-circle"
-                                                 alt="User Image">
+                                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                         </div>
                                         <h4>
                                             Reviewers
@@ -115,8 +110,8 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="fa fa-warning text-yellow"></i> Very long description here that
-                                        may not fit into the
+                                        <i class="fa fa-warning text-yellow"></i> Very long description here that may
+                                        not fit into the
                                         page and may cause design problems
                                     </a>
                                 </li>
@@ -159,8 +154,8 @@
                                         </h3>
                                         <div class="progress xs">
                                             <div class="progress-bar progress-bar-aqua" style="width: 20%"
-                                                 role="progressbar"
-                                                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                 role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                 aria-valuemax="100">
                                                 <span class="sr-only">20% Complete</span>
                                             </div>
                                         </div>
@@ -175,8 +170,8 @@
                                         </h3>
                                         <div class="progress xs">
                                             <div class="progress-bar progress-bar-green" style="width: 40%"
-                                                 role="progressbar"
-                                                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                 role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                 aria-valuemax="100">
                                                 <span class="sr-only">40% Complete</span>
                                             </div>
                                         </div>
@@ -191,8 +186,8 @@
                                         </h3>
                                         <div class="progress xs">
                                             <div class="progress-bar progress-bar-red" style="width: 60%"
-                                                 role="progressbar"
-                                                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                 role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                 aria-valuemax="100">
                                                 <span class="sr-only">60% Complete</span>
                                             </div>
                                         </div>
@@ -207,8 +202,8 @@
                                         </h3>
                                         <div class="progress xs">
                                             <div class="progress-bar progress-bar-yellow" style="width: 80%"
-                                                 role="progressbar"
-                                                 aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                 role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                                                 aria-valuemax="100">
                                                 <span class="sr-only">80% Complete</span>
                                             </div>
                                         </div>
@@ -224,52 +219,66 @@
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">店长登录</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <!-- User image -->
-                        <li class="user-header">
-                            <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-                            <p>
-                                Alexander Pierce - Web Developer
-                                <small>Member since Nov. 2012</small>
-                            </p>
-                        </li>
-                        <!-- Menu Body -->
-                        <li class="user-body">
-                            <div class="row">
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Followers</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Sales</a>
-                                </div>
-                                <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
-                                </div>
-                            </div>
-                            <!-- /.row -->
-                        </li>
-                        <!-- Menu Footer-->
-                        <li class="user-footer">
-                            <div class="pull-left" >
-                                <a href="{{route("user.reg")}}" class="btn btn-default btn-flat">店铺注册</a>
-                            </div>
-                            <div class="pull-right">
-                                <a href="{{route("user.login")}}" class="btn btn-default btn-flat">店铺登录</a>
-                            </div>
-                            <div class="pull-left">
-                                <a href="{{route("user.index")}}" class="btn btn-default btn-flat">店铺管理</a>
-                            </div>
-                            <div class="pull-right">
-                                <a href="{{route("user.loginout")}}" class="btn btn-default btn-flat">注销登录</a>
-                            </div>
+                    @auth
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">{{\Illuminate\Support\Facades\Auth::user()->name}}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
-                        </li>
-                    </ul>
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+
+                                <div class="pull-right">
+                                    <a href="{{route("user.edit")}}" class="btn btn-default btn-flat">修改密码</a>
+                                </div>
+                                <div class="pull-left">
+                                    <a href="{{route("user.index")}}" class="btn btn-default btn-flat">店铺管理</a>
+                                </div>
+                                <div class="pull-left">
+                                    <a href="{{route("user.reg")}}" class="btn btn-default btn-flat">店铺注册</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="{{route("user.loginout")}}" class="btn btn-default btn-flat">注销登录</a>
+                                </div>
+                            </li>
+                        </ul>
+                    @endauth
+
+                    @guest
+                    <li class="dropdown user user-menu">
+                        <a href="{{route('user.login')}}" class="dropdown-toggle">登录</a>
+
+                    </li>
+                    <li class="dropdown user user-menu">
+                        <a href="{{route("user.reg")}}" class="dropdown-toggle">注册</a>
+
+                    </li>
+                    @endguest
                 </li>
                 <!-- Control Sidebar Toggle Button -->
                 <li>

@@ -33,7 +33,7 @@ class AdminController extends BaseController
             return redirect()->route("admin.login");
         }
         //显示视图
-        return view("admin.reg");
+        return view("admin.admin.reg");
 
     }
 
@@ -49,16 +49,16 @@ class AdminController extends BaseController
                 //提示
                 $request->session()->flash("success", "登录成功");
                 //跳转
-                return redirect()->route("shop.index");
+                return redirect()->route("admin.index");
 
             } else {
                 $request->session()->flash("danger", "账号或密码错误");
-                return redirect()->route("admin.reg");
+                return redirect()->route("admin.index");
 
             }
         }
         //显示视图
-        return view("admin.login");
+        return view("admin.admin.login");
 
 
     }
@@ -71,7 +71,7 @@ class AdminController extends BaseController
         //提示
         $request->session()->flash("success", "注销成功");
         //跳转
-        return redirect()->route("shop.index1");
+        return redirect()->route("admin.index");
 
 
     }
@@ -107,6 +107,24 @@ class AdminController extends BaseController
         }
         //显示视图
         return view("admin.admin.edit");
+    }
+
+    public function del(Request $request,$id)
+    {
+        //通过id找到数据
+        $admins=Admin::findOrfail($id);
+        if ($admins->id==1){
+          $request->session()->flash("danger","你没有权限删除我,我是超级管理员");
+            return redirect()->route("admin.index");
+            }
+            //删除数据
+        $admins->delete();
+        //提示
+        $request->session()->flash("success","删除成功");
+        //跳转
+        return redirect()->route("admin.index");
+
+
     }
 
 

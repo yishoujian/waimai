@@ -1,4 +1,4 @@
-@extends("layouts.dafault")
+@extends("admin/layouts/dafault")
 @section("content")
     <form action="" class="" method="post" enctype="multipart/form-data">
     <table class="table table-hover" >

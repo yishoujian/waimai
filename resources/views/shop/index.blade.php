@@ -1,4 +1,4 @@
-@extends("layouts.dafault")
+@extends("shop/layouts.dafault")
 @section("content")
     <table class="table table-hover">
         <tr><th>店铺编号</th><th>店铺分类名称</th><th>店铺名称</th><th>店铺图片</th><th>店铺评分</th>
@@ -18,6 +18,7 @@
                         <img src="/images/1.jpg" width="80" height="60">
                     @endif</td>
                 </td>
+
                 <td>{{$shop->shop_rating}}</td>
                 <td>{{$shop->brand}}</td>
                 <td>{{$shop->on_time}}</td>

@@ -1,4 +1,4 @@
-@extends("layouts.dafault")
+@extends("admin/layouts.dafault")
 @section("content")
     <form action="" class="" method="post" enctype="multipart/form-data">
     <table class="table table-hover" >
@@ -10,10 +10,13 @@
 
                 <td>{{$admin->email}}</td>
                 <td>
+
                     <a href="{{route("admin.edit",$admin)}}" class="btn btn-success">编辑</a>
                 </td>
                 <td>
-                    <a href="{{route("admin.del",$admin)}}" class="btn btn-danger">删除</a>
+                    @if($admin->id!==1)
+                    <a href="{{route("admin.del",$admin)}}"  class="btn btn-danger">删除</a>
+                        @endif
                 </td>
             </tr>
         @endforeach

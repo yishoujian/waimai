@@ -23,7 +23,7 @@
 <div class="callout-danger container-fluid" >
 
     <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-        {{csrf_field()}}
+          {{csrf_field()}}
         <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
             <div class="col-sm-3">

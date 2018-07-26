@@ -67,7 +67,20 @@ return [
             'region' => env('AWS_DEFAULT_REGION'),
             'bucket' => env('AWS_BUCKET'),
         ],
+        'oss' => [
+            'driver'        => 'oss',
+            'access_id'     => '<LTAICkzbQn0fTiHc>',
+            'access_key'    => '<xRoz5ISd0e8GMo2YnStxneXRbAF5P5>',
+            'bucket'        => '<php0325ele.oss-cn-shenzhen.aliyuncs.com>',
+            'endpoint'      => '<oss-cn-shenzhen.aliyuncs.com>', // OSS 外网节点或自定义外部域名
+            'debug'         => false
+],
+
 
     ],
+
+
+
+
 
 ];

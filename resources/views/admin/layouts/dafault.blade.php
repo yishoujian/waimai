@@ -42,11 +42,11 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-
-@include("admin.layouts._header")
+{{--@include('vendor/ueditor.assets')--}}
+@include("admin/layouts._header")
 
     <!-- Left side column. contains the logo and sidebar -->
-@include("layouts/_left")
+@include("admin/layouts/_left")
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -61,8 +61,8 @@
                 <li class="active">Dashboard</li>
             </ol>
         </section>
-    @include("layouts/_msg")
-    @include("layouts/_error")
+    @include("admin/layouts/_msg")
+    @include("admin/layouts/_error")
         <!-- Main content -->
         @yield("content")
 
@@ -70,7 +70,7 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-@include("layouts/_footer")
+@include("admin/layouts/_footer")
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

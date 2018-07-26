@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>商家店铺编辑</title>
-@include("layouts/_msg")
-@include("layouts/_error")
+@include("shop/layouts/_msg")
+@include("shop/layouts/_error")
 
 <!-- Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
