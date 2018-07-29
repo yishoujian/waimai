@@ -43,7 +43,7 @@ class ShopCategoryController extends BaseController
         return redirect()->route("shop_category.index");
         }
         //显示视图
-        return view("shop_category.add",compact("shops"));
+        return view("admin/shop_category.add",compact("shops"));
         }
 
     public function edit(Request $request,$id)

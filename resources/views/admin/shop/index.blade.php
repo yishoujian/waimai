@@ -10,14 +10,15 @@
             <tr>
                 <td>{{$shop->id}}</td>
                 <td>{{$shop->cate->name}}</td>
-                <td>{{$shop->name}}</td>
+                <td>{{$shop->shop_name}}</td>
                 <td>
-                    @if($shop->shop_logo)
-                        <img src="/uploads/{{$shop->shop_logo}}" width="80" height="60">
+                    @if($shop->shop_img)
+                        <img src="/uploads/{{$shop->shop_img}}" width="80" height="60">
                     @else
                         <img src="/images/1.jpg" width="80" height="60">
                     @endif</td>
                 </td>
+
                 <td>{{$shop->shop_rating}}</td>
                 <td>{{$shop->brand}}</td>
                 <td>{{$shop->on_time}}</td>

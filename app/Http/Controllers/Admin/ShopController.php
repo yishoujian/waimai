@@ -20,7 +20,7 @@ class ShopController extends BaseController
 
 //
         //显示视图
-        return view("shop.index",compact("shops"));
+        return view("admin.shop.index",compact("shops"));
 
 
     }
@@ -31,7 +31,7 @@ class ShopController extends BaseController
         $shops=Shop::paginate(2);
 
         //显示视图
-        return view("shop.index1",compact("shops"));
+        return view("admin.shop.index1",compact("shops"));
         }
 
     /**
@@ -48,7 +48,7 @@ class ShopController extends BaseController
         if ($request->isMethod("post")){
             //验证字段是否合法
             $this->validate($request,[
-                "name"=>"required",
+                "shop_name"=>"required",
 
                 "password"=>"required|min:3",
 
@@ -57,10 +57,10 @@ class ShopController extends BaseController
             $shops=$request->all();
             $shops['status']="1";
 //            var_dump($shops);exit;
-            $shops['shop_logo']="";
-            if ($request->file("shop_logo") ){
-                $shops['shop_logo']=$request->file("shop_logo")->store("shop","logo");
-            }
+//            $shops['shop_img']="";
+//            if ($request->file("shop_img") ){
+//                $shops['shop_img']=$request->file("shop_img")->store("shop","logo");
+//            }
 //dd($shops);
             //添加入库
            Shop::create($shops);
@@ -72,7 +72,7 @@ class ShopController extends BaseController
 
         }
         //显示视图
-        return view("shop.add",compact("shops","datas"));
+        return view("admin.shop.add",compact("shops","datas"));
 
         }
         /**
@@ -85,12 +85,13 @@ class ShopController extends BaseController
         //得到所有商品分类信息
         $datas=ShopCategory::all();
         //通过id找到数据
-      $shops=Shop::find($id);
+      $shops=Shop::findOrfail($id);
+//      dd($shops);
 //
       //判断提交方式
         if ($request->isMethod("post")){
             $this->validate($request,[
-               "name"=>"required",
+               "shop_name"=>"required",
 //                "password"=>"required",
             ]);
             //的到更新后的数据
@@ -108,7 +109,7 @@ class ShopController extends BaseController
             return redirect()->route("shop.index1");
 
             }
-            return view("shop.edit",compact("data","shops","datas"));
+            return view("admin.shop.edit",compact("data","shops","datas"));
         }
 
     public function del(Request $request,$id)
@@ -126,6 +127,7 @@ class ShopController extends BaseController
 
     public function check(Request $request,$id)
     {
+        $shops=Shop::paginate(2);
         //得到数据
         $data=Shop::findOrFail($id);
         //得到状态
@@ -138,7 +140,7 @@ class ShopController extends BaseController
         $shops=Shop::paginate(2);
 
         //显示视图
-        return view("shop.index1",compact("shops","data"));
+        return view("admin.shop.index1",compact("shops","data"));
 
 
 

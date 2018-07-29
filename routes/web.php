@@ -30,7 +30,7 @@ Route::domain('admin.com')->namespace('Admin')->group(function () {
     Route::any('shop/check/{id}',"ShopController@check")->name("shop.check");
 
     //活动管理
-    Route::any('activity/index',"ActivityController@index")->name("activity.index");
+    Route::any('activity/index1',"ActivityController@index")->name("activity.index1");
     Route::any('activity/add',"ActivityController@add")->name("activity.add");
     Route::any('activity/edit/{id}',"ActivityController@edit")->name("activity.edit");
     Route::any('activity/del/{id}',"ActivityController@del")->name("activity.del");
@@ -44,6 +44,9 @@ Route::domain('admin.com')->namespace('Admin')->group(function () {
     Route::any('admin/edit/{id}',"AdminController@edit")->name("admin.edit");
     Route::any('admin/del/{id}',"AdminController@del")->name("admin.del");
     Route::any('user/index',"UserController@index")->name("user.index");
+    //图片上传
+    Route::any('uploads/index',"UploadsController@index")->name("uploads.index");
+
 
 });
 //商户

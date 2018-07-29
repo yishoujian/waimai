@@ -42,6 +42,7 @@ class AdminController extends BaseController
         //判断提交方式
         if ($request->isMethod("post")) {
             //判断账号密码是否正确
+            $admin=$request->post('name');
 
             if (Auth::guard("admin")->attempt(['name' => $request->post('name'),
                 'password' => $request->post('password')],
@@ -58,7 +59,7 @@ class AdminController extends BaseController
             }
         }
         //显示视图
-        return view("admin.admin.login");
+        return view("admin.admin.login",compact('admin'));
 
 
     }
